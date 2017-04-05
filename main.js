@@ -2,6 +2,7 @@
  * Created by Duncan on 4/2/2017.
  */
 
+var config = require("./config.json");
 var http = require('http');
 var fs   = require('fs');
 var path = require('path');
@@ -16,7 +17,7 @@ http.createServer(function(req, res){
         res.writeHead(200, {'Content-Type': 'text/html'});
         fs.createReadStream('index.html').pipe(res);
     } else if (ext.test(req.url)) {
-        var p = path.join("C:/Users/Duncan/CodeHut/Interpreter/", req.url);
+        var p = path.join(config.projectPath, req.url);
         // console.log("Handling request for " + req.url + "!");
         fs.exists(p, function(exists){
             if (exists) {
