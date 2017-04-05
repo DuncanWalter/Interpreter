@@ -17,7 +17,7 @@ define(["src/State", "src/Template"], function(State, Template){
             var children;
             var node = new State(
                 function(input){
-                    return router(input) != node.check();
+                    return router(input) !== node.check();
                 },
                 router
             );
@@ -27,12 +27,12 @@ define(["src/State", "src/Template"], function(State, Template){
                         child.destroy();
                     });
                 }
-                if (selector && selector != "") {
+                if (selector && selector !== "") {
                     root.append("<" + selector + "></" + selector + ">");
                     console.log(that);
                     console.log(selector);
                     children = parent.template.subTemplates.reduce(function(accumulator, template){
-                        return (template.selector == selector) ? template : accumulator;
+                        return (template.selector === selector) ? template : accumulator;
                     }, null);
                     children = children ? children.load(that) : [];
                 }
