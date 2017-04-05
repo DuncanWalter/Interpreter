@@ -10,29 +10,25 @@
     <script src="lib/jquery-3.1.1.min.js"></script>
     <script src="lib/require.min.js"></script>
 </head>
-<body style="background: #222222">
-
-    <!--DESKTOP VERSION OF THE PAGE-->
-    <div class="dark desktop tablet cascade">
-        <h1>Welcome to math-ville</h1>
-        <!--<input id="input" type="text">-->
-        <!--<div id="send" class="button">submit</div>-->
-        <!--<p id="response"></p>-->
-    </div>
+<body style="background: #222222; min-height: 100vh;">
 
     <!--MOBILE VERSION OF THE PAGE-->
-    <div class="dark mobile cascade">
-        <h1>Why are you doing math on a phone?</h1>
-        <input class="text-input" id="input" type="text">
-        <div id="send" class="button"><b>submit</b></div>
-        <p id="response">I am updated!</p>
+    <div class="dark mobile tablet desktop cascade">
+        <div class="col" style="height: 95vh">
+            <div class="f1"></div>
+            <h1>Semantic Tree Interpreter</h1>
+            <input class="text-input" id="input" type="text">
+            <div id="send" class="button"><b>submit</b></div>
+            <p id="response" style="text-align: center"></p>
+            <div class="f1"></div>
+        </div>
     </div>
 
-    <!--<example-selector class="cascade">Should Display</example-selector>-->
-    <!--<example-selector class="cascade"></example-selector>-->
-    <!--<example-selector class="cascade"></example-selector>-->
-    <!--<example-selector class="cascade"></example-selector>-->
-    <!--<example-selector class="cascade"></example-selector>-->
+    <example-selector class="cascade">Should Display</example-selector>
+    <example-selector class="cascade"></example-selector>
+    <example-selector class="cascade"></example-selector>
+    <example-selector class="cascade"></example-selector>
+    <example-selector class="cascade"></example-selector>
 
 
     <!--CONTROLLER FOR THE PAGE-->
